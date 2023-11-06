@@ -1,0 +1,262 @@
+1.Maximum of two numbers in Python
+Solution:
+print("Welcome to the Maxium of 2 numbers")
+number1 = input("Please input your first digit?\n")
+number2 = input("Please enter your second digit?\n")
+total = int(number1) + int(number2)
+print(f"Here is the Maximum {total}")
+
+
+2.Write a Python Program for Generating a Report Card
+Solution:
+def grade(percent):
+  if percent >= 90:
+    return "A+"
+  elif percent >= 80:
+    return "A"
+  elif percent >= 70:
+    return "B+"
+  elif percent >= 60:
+    return "B"
+  elif percent >= 50:
+    return "C+"
+  elif percent >= 40:
+    return "C"
+  else:
+    return "F"
+subjects = ["Math", "Science", "English", "History", "Geography"]
+marks = [85, 92, 78, 64, 71]
+total = sum(marks)
+percent = total / len(subjects)
+print(f"Report Card\n-----------\nName: John Doe\nClass: 10\nRoll No: 23\n \nSubject\tMark\tGrade\n-------\t----\t-----")
+for i in range(len(subjects)):
+  print(f"{subjects[i]}\t{marks[i]}\t{grade(marks[i])}")
+print()
+print(f"Total\t{total}\t{grade(percent)}\nPercentage: {percent:.2f}%")
+
+
+3.Python program For Checking Leap Year or Not
+Solution:
+year = int(input())
+if year % 4 == 0:
+  if year % 100 == 0:
+    if year % 400 == 0:
+      print("Leap year")
+    else:
+      print("Not leap year")
+  else:
+    print("Leap year")
+else:
+  print("Not leap year")
+
+
+4.Python Program to Check weather a candidate Eligible for Vote or not
+Solution:
+def eligible(age):
+  if age >= 18:
+    return "Yes"
+  else:
+    return "No"
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+print(f"Name: {name}")
+print(f"Age: {age}")
+print(f"Eligible for vote: {eligible(age)}")
+
+
+5.Python program to check weather Given Number is Divisible by 7 or Not
+Solution:
+def divisible_by_7(number):
+  if number % 7 == 0:
+    return True
+  else:
+    return False
+number = int(input("Enter a number: "))
+print(f"Is {number} divisible by 7? {divisible_by_7(number)}")
+
+
+6.Python Program to check weather a given number is odd or Even
+Solution:
+def odd_or_even(number):
+  if number % 2 == 0:
+    return "Even"
+  else:
+    return "Odd"
+
+
+number = int(input("Enter a number: "))
+print(f"The number {number} is {odd_or_even(number)}.")
+
+7.Write a program to display "Hello" if a number entered by user is a multiple of five , otherwise print "Bye".
+Solution:
+def divisible_by_5(number):
+  if number % 5 == 0:
+    return True
+  else:
+    return False
+number = int(input("Enter a number: "))
+if divisible_by_5(number):
+  print("Hello")
+else:
+  print("Bye")
+
+
+8.Write a program to check whether a person is eligible for voting or not. (accept age from user)
+Solution:
+def eligible(age):
+  if age >= 18:
+    return "Yes"
+  else:
+    return "No"
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+print(f"Name: {name}")
+print(f"Age: {age}")
+print(f"Eligible for vote: {eligible(age)}")
+
+9.Write a program to check whether the last digit of a number( entered by user ) is divisible by 3 or not.
+Solution:
+def divisible_by_3_last_digit(number):
+  last_digit = number % 10
+  if last_digit % 3 == 0:
+    return True
+  else:
+    return False
+number = int(input("Enter a number: "))
+print(f"Is the last digit of {number} divisible by 3? {divisible_by_3_last_digit(number)}")
+
+
+10."Write a program to accept percentage from the user and display the grade according to the following criteria:
+ Marks Grade
+ > 90 A
+ > 80 and <= 90 B
+ >= 60 and <= 80 C
+ below 60 D"
+Solution:
+def grade(percent):
+  if percent > 90:
+    return "A"
+  elif percent > 80 and percent <= 90:
+    return "B"
+  elif percent >= 60 and percent <= 80:
+    return "C"
+  else:
+    return "D"
+percent = float(input("Enter your percentage: "))
+print(f"Your grade is {grade(percent)}.")
+
+
+11."Write a program to accept the cost price of a bike and display the road tax to be paid according to the following criteria :
+ Cost price (in Rs) Tax
+ > 100000 15 %
+ > 50000 and <= 100000 10%
+ <= 50000 5%"
+Solution:
+def road_tax(cost):
+  if cost > 100000:
+    return cost * 0.15
+  elif cost > 50000 and cost <= 100000:
+    return cost * 0.1
+  else:
+    return cost * 0.05
+cost = float(input("Enter the cost price of the bike (in Rs): "))
+print(f"The road tax to be paid is {road_tax(cost)} Rs.")
+
+
+12.Write a program to accept a number from 1 to 7 and display the name of the day like 1 for Sunday , 2 for Monday and so on.
+Solution:
+days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+number = int(input("Enter a number from 1 to 7: "))
+if number >= 1 and number <= 7:
+  print(f"The day is {days[number - 1]}.")
+else:
+  print("Invalid number. Please enter a number from 1 to 7.")
+
+
+13.Write a program to accept a number from 1 to 12 and display name of the month and days in that month like 1 for January and number of days 31 and so on
+Solution:
+months = [("January", 31), ("February", 28), ("March", 31), ("April", 30), ("May", 31), ("June", 30), ("July", 31), ("August", 31), ("September", 30), ("October", 31), ("November", 30), ("December", 31)]
+number = int(input("Enter a number from 1 to 12: "))
+if number >= 1 and number <= 12:
+    print(f"The month is {months[number - 1][0]} and it has {months[number - 1][1]} days.")
+else:
+  print("Invalid number. Please enter a number from 1 to 12.")
+
+
+14."Accept any city from the user and display monument of that city.
+ City Monument
+ Delhi Red Fort
+ Agra Taj Mahal
+ Jaipur Jal Mahal"
+Solution:
+cities = {"Delhi": "Red Fort", "Agra": "Taj Mahal", "Jaipur": "Jal Mahal"}
+city = input("Enter a city: ")
+if city in cities:
+  print(f"The monument of {city} is {cities[city]}.")
+else:
+  print("Sorry, I don't know the monument of that city.")
+
+
+15.Write a program to check whether a person is senior citizen or not.
+Solution:
+def senior(age):
+  if age >= 60:
+    return "Yes"
+  else:
+    return "No"
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+print(f"Name: {name}")
+print(f"Age: {age}")
+print(f"Senior citizen: {senior(age)}")
+
+
+16.Write a program to find the lowest number out of two numbers excepted from user.
+Solution:
+def lowest(x, y):
+  return min(x, y)
+x = float(input("Enter the first number: "))
+y = float(input("Enter the second number: "))
+print(f"The lowest number is {lowest(x, y)}.")
+
+
+17.Write a program to find the largest number out of two numbers excepted from user.
+Solution:
+def largest(x, y):
+  return max(x, y)
+x = float(input("Enter the first number: "))
+y = float(input("Enter the second number: "))
+print(f"The largest number is {largest(x, y)}.")
+
+
+18.Write a program to whether a number (accepted from user) is divisible by 2 and 3 both.
+Solution:
+def divisible_by_2_and_3(number):
+  if number % 2 == 0 and number % 3 == 0:
+    return True
+  else:
+    return False
+number = int(input("Enter a number: "))
+print(f"Is {number} divisible by 2 and 3 both? {divisible_by_2_and_3(number)}")
+
+
+19.Write a program to find the largest number out of three numbers excepted from user.
+Solution:
+def largest(a, b, c):
+  return max(a, b, c)
+a = float(input("Enter the first number: "))
+b = float(input("Enter the second number: "))
+c = float(input("Enter the third number: "))
+print(f"The largest number is {largest(a, b, c)}.")
+
+
+20.Write a program to check a character is vowel or not.1.
+Solution:
+def vowel(char):
+  char = char.lower()
+  if char in "aeiou":
+    return True
+  else:
+    return False
+char = input("Enter a character: ")
+print(f"Is {char} a vowel? {vowel(char)}")
